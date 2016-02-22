@@ -1,0 +1,4 @@
+tsd install angular --resolve --save
+
+--resolve: resolved reference dependencies
+--save: save to a tsd.json file
