@@ -1,7 +1,7 @@
 tsd install angular --resolve --save
 
 --resolve: resolved reference dependencies
---save: save to a tsd.json file
+--save: save to a tsd.d.ts file --> file with all references
 
 
 Typescript module -> IIFE

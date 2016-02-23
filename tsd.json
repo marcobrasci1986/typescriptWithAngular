@@ -13,6 +13,12 @@
     },
     "angularjs/angular-resource.d.ts": {
       "commit": "dade4414712ce84e3c63393f1aae407e9e7e6af7"
+    },
+    "angularjs/angular-mocks.d.ts": {
+      "commit": "dade4414712ce84e3c63393f1aae407e9e7e6af7"
+    },
+    "angularjs/angular-route.d.ts": {
+      "commit": "dade4414712ce84e3c63393f1aae407e9e7e6af7"
     }
   }
 }

@@ -1,9 +1,7 @@
-/*
 module app.common {
 
     var mockResource = angular
-        .module("productResourceMock",
-            ["ngMockE2E"]);
+        .module("productResourceMock", ["ngMockE2E"]);
 
     mockResource.run(mockRun);
     
@@ -68,4 +66,3 @@ module app.common {
         $httpBackend.whenGET(/app/).passThrough();
     }
 }
-*/
