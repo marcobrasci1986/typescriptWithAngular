@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Acme Product Management</title>
+
+    <!-- Style sheets -->
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body ng-app="productManagement">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <div class="navbar-brand">Acme Product Management</div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Load view here based on $routeProvider-->
+        <ng-view></ng-view>
+    </div>
+
+    <!-- Library Scripts -->
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+    <script src="scripts/angular-mocks.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    
+    <!-- Application Script -->
+    <script src="app.js"></script>
+
+    <!-- Domain Classes -->
+    <script src="domain/product.js"></script>
+
+    <!-- Services -->
+    <script src="services/services.js"></script>
+    <script src="services/dataAccessService.js"></script>
+    <script src="services/productResourceMock.js"></script>
+
+    <!-- Controllers -->
+    <script src="controllers/productListController.js"></script>
+    <script src="controllers/productDetailController.js"></script>
+</body>
+
+</html>

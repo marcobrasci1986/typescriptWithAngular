@@ -1,3 +1,5 @@
+///<reference path="../typings/tsd.d.ts"/>
+
 module app {
     var main = angular.module('productManagement',
         ['ngRoute',
@@ -11,11 +13,11 @@ module app {
 
         $routeProvider
             .when('/productList', {
-                templateUrl: 'app/products/productListView.html',
+                templateUrl: 'views/productListView.html',
                 controller: 'ProductListController as vm'
             })
             .when('/productDetail/:productId', {
-                templateUrl: 'app/products/productDetailView.html',
+                templateUrl: 'views/productDetailView.html',
                 controller: 'ProductDetailController as vm'
             })
             .otherwise('/productList');

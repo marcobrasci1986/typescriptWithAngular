@@ -1,0 +1,9 @@
+{
+  "name": "plsRemind.me",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-typescript": "^0.8.0"
+  }
+}
