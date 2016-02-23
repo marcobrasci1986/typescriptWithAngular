@@ -1,6 +1,4 @@
-/// <reference path="../../../typings/angularjs/angular.d.ts" />
 module app.productList {
-
 
     interface IProductListModel {
         title:string;
@@ -45,7 +43,7 @@ module app.productList {
                     "price": 8.99,
                     "imageUrl": "http://openclipart.org/image/300px/svg_to_png/73/rejon_Hammer.png"
                 }
-            ]
+            ];
 
             var product = new app.domain.Product(3, "Saw", "TBX", new Date(2002, 3, 1), 16.95, '15-inch blade', 'https://openclipart.org/download/196255/Saw.svg');
             product.price = product.calculateDiscount(10);
@@ -56,6 +54,7 @@ module app.productList {
             this.showImage = !this.showImage;
         }
     }
+    // Add controller to main angular module
     angular
         .module('productManagement')
         .controller('ProductListController', ProductListController)

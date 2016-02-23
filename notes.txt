@@ -6,3 +6,5 @@ tsd install angular --resolve --save
 
 Typescript module -> IIFE
 Javascript module pattern -> IIFE (Immediately invoked function expression)
+
+Angular service -> singleton -> share data
