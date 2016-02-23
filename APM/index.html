@@ -18,7 +18,8 @@
     </nav>
 
     <div class="container">
-        <div ng-include="'app/products/productListView.html'"></div>
+        <!-- Load view here based on $routeProvider-->
+        <ng-view></ng-view>
     </div>
 
     <!-- Library Scripts -->
@@ -40,6 +41,7 @@
 
     <!-- Controllers -->
     <script src="app/products/productListController.js"></script>
+    <script src="app/products/productDetailController.js"></script>
 </body>
 
 </html>
