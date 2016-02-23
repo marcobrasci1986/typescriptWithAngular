@@ -2,7 +2,7 @@ module app {
     var main = angular.module('productManagement',
         ['ngRoute',
             'productResourceMock',
-            'common.services']);
+            'services']);
 
     main.config(routeConfig);
 

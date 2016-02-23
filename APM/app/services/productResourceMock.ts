@@ -1,4 +1,4 @@
-module app.common {
+module app.services {
 
     var mockResource = angular
         .module("productResourceMock", ["ngMockE2E"]);

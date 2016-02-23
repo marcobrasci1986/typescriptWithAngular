@@ -1,4 +1,4 @@
-module app.productList {
+module app.controllers {
 
     interface IProductListModel {
         title:string;

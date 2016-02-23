@@ -1,6 +1,6 @@
-module app.productDetail {
+module app.controllers {
     import IProduct = app.domain.IProduct;
-    import DataAccessService = app.common.DataAccessService;
+    import DataAccessService = app.services.DataAccessService;
     import IRouteParamsService = angular.route.IRouteParamsService;
 
     interface IProductDetailModel {

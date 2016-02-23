@@ -1,6 +1,6 @@
-/// <reference path="../../../../typings/tsd.d.ts" />
+/// <reference path="../../../typings/tsd.d.ts" />
 
-module app.common {
+module app.services {
     import IProduct = app.domain.IProduct;
     interface IDataAccessService {
         getProductResource(): ng.resource.IResourceClass<IProductResource>;
@@ -23,7 +23,7 @@ module app.common {
     }
     // Register service in angular module
     angular
-        .module("common.services")
+        .module("services")
         .service("dataAccessService", DataAccessService)
 
 }
