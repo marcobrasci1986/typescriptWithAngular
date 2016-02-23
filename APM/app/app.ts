@@ -11,11 +11,11 @@ module app {
 
         $routeProvider
             .when('/productList', {
-                templateUrl: 'app/products/productListView.html',
+                templateUrl: 'app/views/products/productListView.html',
                 controller: 'ProductListController as vm'
             })
             .when('/productDetail/:productId', {
-                templateUrl: 'app/products/productDetailView.html',
+                templateUrl: 'app/views/products/productDetailView.html',
                 controller: 'ProductDetailController as vm'
             })
             .otherwise('/productList');
