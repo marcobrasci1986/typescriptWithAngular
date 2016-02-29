@@ -1,5 +1,6 @@
 .idea
 *.js
+!APM/app/scripts/*.js
 **/*.js.map
 
 ## Ignore Visual Studio temporary files, build results, and
