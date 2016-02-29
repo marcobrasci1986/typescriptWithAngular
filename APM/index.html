@@ -1,11 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
     <title>Acme Product Management</title>
 
-    <!-- Style sheets -->
-    <link href="styles/bootstrap.css" rel="stylesheet" />
+
+    <!-- bower:css-->
+    <!-- endbower-->
+
+    <!-- inject:css-->
+    <!-- endinject-->
 </head>
 
 <body ng-app="productManagement">
@@ -22,26 +26,55 @@
         <ng-view></ng-view>
     </div>
 
-    <!-- Library Scripts -->
-    <script src="app/scripts/angular.js"></script>
-    <script src="app/scripts/angular-resource.js"></script>
-    <script src="app/scripts/angular-mocks.js"></script>
-    <script src="app/scripts/angular-route.js"></script>
-    
-    <!-- Application Script -->
-    <script src="app/app.js"></script>
+    <!-- bower:js-->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="../bower_components/angular-resource/angular-resource.js"></script>
+    <script src="../bower_components/angular-route/angular-route.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower-->
 
-    <!-- Domain Classes -->
-    <script src="app/domain/product.js"></script>
+    <!-- inject:js-->
 
-    <!-- Services -->
-    <script src="app/services/services.js"></script>
-    <script src="app/services/dataAccessService.js"></script>
-    <script src="app/services/productResourceMock.js"></script>
+    <script src="/APM/build/dev/js/app.js"></script>
 
-    <!-- Controllers -->
-    <script src="app/controllers/productListController.js"></script>
-    <script src="app/controllers/productDetailController.js"></script>
+    <script src="/APM/build/dev/js/controllers/productDetailController.js"></script>
+
+    <script src="/APM/build/dev/js/controllers/productListController.js"></script>
+
+    <script src="/APM/build/dev/js/domain/product.js"></script>
+
+    <script src="/APM/build/dev/js/services/dataAccessService.js"></script>
+
+    <script src="/APM/build/dev/js/services/productResourceMock.js"></script>
+
+    <script src="/APM/build/dev/js/services/services.module.js"></script>
+
+    <!-- endinject-->
+
+
+
+    <!--&lt;!&ndash; Library Scripts &ndash;&gt;-->
+    <!--<script src="../bower_components/angular/angular.js"></script>-->
+    <!--<script src="../bower_components/angular-resource/angular-resource.js"></script>-->
+    <!--<script src="../bower_components/angular-mocks/angular-mocks.js"></script>-->
+    <!--<script src="../bower_components/angular-route/angular-route.js"></script>-->
+    <!---->
+    <!--&lt;!&ndash; Application Script &ndash;&gt;-->
+    <script src="build/dev/js/app.js"></script>
+
+    <!--&lt;!&ndash; Domain Classes &ndash;&gt;-->
+    <!--<script src="./build/dev/js/domain/product.js"></script>-->
+
+    <!--&lt;!&ndash; Services &ndash;&gt;-->
+    <!--<script src="./build/dev/js/services/services.module.js"></script>-->
+    <!--<script src="./build/dev/js/services/dataAccessService.js"></script>-->
+    <!--<script src="./build/dev/js/services/productResourceMock.js"></script>-->
+
+    <!--&lt;!&ndash; Controllers &ndash;&gt;-->
+    <!--<script src="./build/dev/js/controllers/productListController.js"></script>-->
+    <!--<script src="./build/dev/js/controllers/productDetailController.js"></script>-->
 </body>
 
 </html>

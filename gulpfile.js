@@ -38,9 +38,32 @@ gulp.task('watcher', function () {
     gulp.watch([config.typescript], ['js']);
 });
 
+/**
+ * Compile TS and LESS
+ */
 gulp.task('compile', ['js','styles'], function () {
     log('Compiling js + css');
 });
+
+/**
+ * 1. get index.html file
+ * 2. Find bower files in right order
+ * 3. Find and inject custom js (first module files, then normal js, exclude spec files). See comments in index.html
+ */
+gulp.task('wiredep', function () {
+    log('Wire up the bower css js and our app js into the html');
+    var options = config.getWireDepDefaultOptions();
+    var wiredep = require('wiredep').stream;
+
+    return gulp
+        .src(config.index)
+        .pipe(wiredep(options)) // inject bower css
+        .pipe($.inject(gulp.src(config.js))) // inject custom js
+        .pipe(gulp.dest(config.root));
+});
+
+
+
 /**
  * Clean all: js + css
  * */
@@ -56,6 +79,9 @@ gulp.task('clean-js', function (done) {
     var files = config.devJs + '**/*.js';
     clean(files, done);
 });
+
+
+
 ///////////
 function clean(path, done) {
     log('Cleaning: ' + $.util.colors.blue(path));

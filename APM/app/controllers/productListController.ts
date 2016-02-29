@@ -14,7 +14,7 @@ module app.controllers {
 
         static $inject=['dataAccessService'];
         constructor(private dataAccessService: app.services.DataAccessService) {
-            this.title = "Product list";
+            this.title = "Product list marco";
             this.showImage = false;
             this.products = [];
 
