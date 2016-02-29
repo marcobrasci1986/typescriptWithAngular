@@ -1,0 +1,17 @@
+{
+  "name": "Angular-with-Typescript",
+  "version": "1.0.0",
+  "description": "Starter Code for Pluralsight Course JavaScript Build Automation with Gulp.js",
+  "authors": [
+    "Marco Brasci"
+  ],
+  "devDependencies": {
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-typescript": "^2.12.0",
+    "gulp-util": "^3.0.7"
+  }
+}
