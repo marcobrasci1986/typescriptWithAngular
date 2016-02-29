@@ -16,6 +16,12 @@ gulp.task('styles', ['clean-styles'], function () {
         .pipe(gulp.dest(config.devCss));
 });
 
+gulp.task('copy-views',['clean-views'], function () {
+    return gulp
+        .src('./app/views/**/*.html')
+        .pipe(gulp.dest(config.dev + 'views/'))
+});
+
 /**
  * Compile Typescript
  */
@@ -41,7 +47,7 @@ gulp.task('watcher', function () {
 /**
  * Compile TS and LESS
  */
-gulp.task('compile', ['js','styles'], function () {
+gulp.task('compile', ['js','styles', 'copy-views'], function () {
     log('Compiling js + css');
 });
 
@@ -56,10 +62,10 @@ gulp.task('wiredep', function () {
     var wiredep = require('wiredep').stream;
 
     return gulp
-        .src(config.index)
+        .src('./app/index.html')
         .pipe(wiredep(options)) // inject bower css
         .pipe($.inject(gulp.src(config.js))) // inject custom js
-        .pipe(gulp.dest(config.root));
+        .pipe(gulp.dest('app/build/dev')); // destination new index.html file
 });
 
 
@@ -67,7 +73,7 @@ gulp.task('wiredep', function () {
 /**
  * Clean all: js + css
  * */
-gulp.task('clean', ['clean-styles', 'clean-js'], function () {
+gulp.task('clean', ['clean-styles', 'clean-js', 'clean-views'], function () {
 });
 gulp.task('clean-styles', function (done) {
     log('Cleaning css');
@@ -77,6 +83,11 @@ gulp.task('clean-styles', function (done) {
 gulp.task('clean-js', function (done) {
     log('Cleaning js');
     var files = config.devJs + '**/*.js';
+    clean(files, done);
+});
+gulp.task('clean-views', function (done) {
+    log('Cleaning html');
+    var files = config.devViews + '**/*.html';
     clean(files, done);
 });
 

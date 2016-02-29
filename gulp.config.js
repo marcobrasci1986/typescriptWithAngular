@@ -1,5 +1,5 @@
 module.exports = function () {
-    var root = './APM/';
+    var root = './app/';
     var buildDev = root + 'build/dev/';
 
 
@@ -15,6 +15,7 @@ module.exports = function () {
         dev: buildDev,
         devCss: buildDev + 'css/',
         devJs: buildDev + 'js/',
+        devViews: buildDev + 'views/',
         tsConfig: root + 'tsconfig.json',
 
         js: [
